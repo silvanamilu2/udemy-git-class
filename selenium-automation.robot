@@ -12,6 +12,7 @@ ${testUr}       ${scheme}://${homepage}
 Open Homepage
     Open browser    ${testUr}       ${browser}
 
+
 *** Test Cases ***
 C001 Hacer Clic en Contenedores
     Open Homepage

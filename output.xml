@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1 (Python 3.7.2 on win32)" generated="20190220 13:21:06.572" rpa="false">
+<suite id="s1" name="Selenium-Automation" source="C:\Users\Silvana\Desktop\UDEMY-Automation\Arrays y Loops\selenium-automation.robot">
+<test id="s1-t1" name="C001 Hacer Clic en Contenedores">
+<kw name="Open Homepage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${testUr}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190220 13:21:06.904" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20190220 13:21:06.904" endtime="20190220 13:21:16.567"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:06.904" endtime="20190220 13:21:16.567"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>@{nombreDeContenedores}</arg>
+<arg>//*[@id="homefeatured"]/li[1]/div/div[2]/h5/a</arg>
+<arg>//*[@id="homefeatured"]/li[2]/div/div[2]/h5/a</arg>
+<arg>//*[@id="homefeatured"]/li[3]/div/div[2]/h5/a</arg>
+<arg>//*[@id="homefeatured"]/li[4]/div/div[2]/h5/a</arg>
+<arg>//*[@id="homefeatured"]/li[5]/div/div[2]/h5/a</arg>
+<arg>//*[@id="homefeatured"]/li[6]/div/div[2]/h5/a</arg>
+<arg>//*[@id="homefeatured"]/li[7]/div/div[2]/h5/a</arg>
+</arguments>
+<msg timestamp="20190220 13:21:16.568" level="INFO">@{nombreDeContenedores} = [ //*[@id="homefeatured"]/li[1]/div/div[2]/h5/a | //*[@id="homefeatured"]/li[2]/div/div[2]/h5/a | //*[@id="homefeatured"]/li[3]/div/div[2]/h5/a | //*[@id="homefeatured"]/li[4]/div/div[2]/h5/a | //*[@i...</msg>
+<status status="PASS" starttime="20190220 13:21:16.568" endtime="20190220 13:21:16.568"></status>
+</kw>
+<kw name="${nombreDeContenedor} IN [ @{nombreDeContenedores} ]" type="for">
+<kw name="${nombreDeContenedor} = //*[@id=&quot;homefeatured&quot;]/li[1]/div/div[2]/h5/a" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${nombreDeContenedor}'=='//*[@id="homefeatured"]/li[8]/div/div[2]/h5/a'</arg>
+<arg>Exit Loop</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:16.569" endtime="20190220 13:21:16.569"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${nombreDeContenedor}</arg>
+</arguments>
+<msg timestamp="20190220 13:21:16.569" level="INFO">Clicking element 'xpath=//*[@id="homefeatured"]/li[1]/div/div[2]/h5/a'.</msg>
+<status status="PASS" starttime="20190220 13:21:16.569" endtime="20190220 13:21:18.920"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="bigpic"]</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:18.920" endtime="20190220 13:21:18.960"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="header_logo"]/a/img</arg>
+</arguments>
+<msg timestamp="20190220 13:21:18.961" level="INFO">Clicking element 'xpath=//*[@id="header_logo"]/a/img'.</msg>
+<status status="PASS" starttime="20190220 13:21:18.960" endtime="20190220 13:21:21.615"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:16.569" endtime="20190220 13:21:21.615"></status>
+</kw>
+<kw name="${nombreDeContenedor} = //*[@id=&quot;homefeatured&quot;]/li[2]/div/div[2]/h5/a" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${nombreDeContenedor}'=='//*[@id="homefeatured"]/li[8]/div/div[2]/h5/a'</arg>
+<arg>Exit Loop</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:21.615" endtime="20190220 13:21:21.616"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${nombreDeContenedor}</arg>
+</arguments>
+<msg timestamp="20190220 13:21:21.619" level="INFO">Clicking element 'xpath=//*[@id="homefeatured"]/li[2]/div/div[2]/h5/a'.</msg>
+<status status="PASS" starttime="20190220 13:21:21.617" endtime="20190220 13:21:23.311"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="bigpic"]</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:23.311" endtime="20190220 13:21:23.341"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="header_logo"]/a/img</arg>
+</arguments>
+<msg timestamp="20190220 13:21:23.342" level="INFO">Clicking element 'xpath=//*[@id="header_logo"]/a/img'.</msg>
+<status status="PASS" starttime="20190220 13:21:23.341" endtime="20190220 13:21:26.043"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:21.615" endtime="20190220 13:21:26.043"></status>
+</kw>
+<kw name="${nombreDeContenedor} = //*[@id=&quot;homefeatured&quot;]/li[3]/div/div[2]/h5/a" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${nombreDeContenedor}'=='//*[@id="homefeatured"]/li[8]/div/div[2]/h5/a'</arg>
+<arg>Exit Loop</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:26.043" endtime="20190220 13:21:26.044"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${nombreDeContenedor}</arg>
+</arguments>
+<msg timestamp="20190220 13:21:26.045" level="INFO">Clicking element 'xpath=//*[@id="homefeatured"]/li[3]/div/div[2]/h5/a'.</msg>
+<status status="PASS" starttime="20190220 13:21:26.044" endtime="20190220 13:21:29.039"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="bigpic"]</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:29.041" endtime="20190220 13:21:29.077"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="header_logo"]/a/img</arg>
+</arguments>
+<msg timestamp="20190220 13:21:29.078" level="INFO">Clicking element 'xpath=//*[@id="header_logo"]/a/img'.</msg>
+<status status="PASS" starttime="20190220 13:21:29.078" endtime="20190220 13:21:32.900"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:26.043" endtime="20190220 13:21:32.900"></status>
+</kw>
+<kw name="${nombreDeContenedor} = //*[@id=&quot;homefeatured&quot;]/li[4]/div/div[2]/h5/a" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${nombreDeContenedor}'=='//*[@id="homefeatured"]/li[8]/div/div[2]/h5/a'</arg>
+<arg>Exit Loop</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:32.901" endtime="20190220 13:21:32.902"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${nombreDeContenedor}</arg>
+</arguments>
+<msg timestamp="20190220 13:21:32.903" level="INFO">Clicking element 'xpath=//*[@id="homefeatured"]/li[4]/div/div[2]/h5/a'.</msg>
+<status status="PASS" starttime="20190220 13:21:32.902" endtime="20190220 13:21:35.232"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="bigpic"]</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:35.233" endtime="20190220 13:21:35.260"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="header_logo"]/a/img</arg>
+</arguments>
+<msg timestamp="20190220 13:21:35.261" level="INFO">Clicking element 'xpath=//*[@id="header_logo"]/a/img'.</msg>
+<status status="PASS" starttime="20190220 13:21:35.261" endtime="20190220 13:21:38.425"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:32.900" endtime="20190220 13:21:38.425"></status>
+</kw>
+<kw name="${nombreDeContenedor} = //*[@id=&quot;homefeatured&quot;]/li[5]/div/div[2]/h5/a" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${nombreDeContenedor}'=='//*[@id="homefeatured"]/li[8]/div/div[2]/h5/a'</arg>
+<arg>Exit Loop</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:38.425" endtime="20190220 13:21:38.427"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${nombreDeContenedor}</arg>
+</arguments>
+<msg timestamp="20190220 13:21:38.427" level="INFO">Clicking element 'xpath=//*[@id="homefeatured"]/li[5]/div/div[2]/h5/a'.</msg>
+<status status="PASS" starttime="20190220 13:21:38.427" endtime="20190220 13:21:40.757"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="bigpic"]</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:40.758" endtime="20190220 13:21:40.791"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="header_logo"]/a/img</arg>
+</arguments>
+<msg timestamp="20190220 13:21:40.791" level="INFO">Clicking element 'xpath=//*[@id="header_logo"]/a/img'.</msg>
+<status status="PASS" starttime="20190220 13:21:40.791" endtime="20190220 13:21:43.714"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:38.425" endtime="20190220 13:21:43.714"></status>
+</kw>
+<kw name="${nombreDeContenedor} = //*[@id=&quot;homefeatured&quot;]/li[6]/div/div[2]/h5/a" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${nombreDeContenedor}'=='//*[@id="homefeatured"]/li[8]/div/div[2]/h5/a'</arg>
+<arg>Exit Loop</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:43.715" endtime="20190220 13:21:43.716"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${nombreDeContenedor}</arg>
+</arguments>
+<msg timestamp="20190220 13:21:43.717" level="INFO">Clicking element 'xpath=//*[@id="homefeatured"]/li[6]/div/div[2]/h5/a'.</msg>
+<status status="PASS" starttime="20190220 13:21:43.716" endtime="20190220 13:21:45.495"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="bigpic"]</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:45.496" endtime="20190220 13:21:45.538"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="header_logo"]/a/img</arg>
+</arguments>
+<msg timestamp="20190220 13:21:45.538" level="INFO">Clicking element 'xpath=//*[@id="header_logo"]/a/img'.</msg>
+<status status="PASS" starttime="20190220 13:21:45.538" endtime="20190220 13:21:49.493"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:43.715" endtime="20190220 13:21:49.493"></status>
+</kw>
+<kw name="${nombreDeContenedor} = //*[@id=&quot;homefeatured&quot;]/li[7]/div/div[2]/h5/a" type="foritem">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${nombreDeContenedor}'=='//*[@id="homefeatured"]/li[8]/div/div[2]/h5/a'</arg>
+<arg>Exit Loop</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:49.493" endtime="20190220 13:21:49.494"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=${nombreDeContenedor}</arg>
+</arguments>
+<msg timestamp="20190220 13:21:49.495" level="INFO">Clicking element 'xpath=//*[@id="homefeatured"]/li[7]/div/div[2]/h5/a'.</msg>
+<status status="PASS" starttime="20190220 13:21:49.494" endtime="20190220 13:21:51.239"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="bigpic"]</arg>
+</arguments>
+<status status="PASS" starttime="20190220 13:21:51.239" endtime="20190220 13:21:51.271"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="header_logo"]/a/img</arg>
+</arguments>
+<msg timestamp="20190220 13:21:51.272" level="INFO">Clicking element 'xpath=//*[@id="header_logo"]/a/img'.</msg>
+<status status="PASS" starttime="20190220 13:21:51.271" endtime="20190220 13:21:54.120"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:49.493" endtime="20190220 13:21:54.120"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:16.569" endtime="20190220 13:21:54.120"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190220 13:21:54.121" endtime="20190220 13:21:56.366"></status>
+</kw>
+<status status="PASS" starttime="20190220 13:21:06.903" endtime="20190220 13:21:56.367" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190220 13:21:06.576" endtime="20190220 13:21:56.368"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Selenium-Automation">Selenium-Automation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
